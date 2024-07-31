@@ -1,0 +1,14 @@
+development:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") %>/<%= ENV.fetch("REDIS_DB") %>
+  channel_prefix: hello_world_development
+
+test:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") %>/<%= ENV.fetch("REDIS_DB") %>
+  channel_prefix: hello_world_test
+
+production:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") %>/<%= ENV.fetch("REDIS_DB") %>
+  channel_prefix: hello_world_production
